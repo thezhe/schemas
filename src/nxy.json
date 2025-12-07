@@ -1,0 +1,25 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"title": "NXY",
+	"description": "Normalized XY coordinates",
+	"type": "object",
+	"required": [
+		"x",
+		"y"
+	],
+	"properties": {
+		"x": {
+			"$ref": "#/definitions/NormalizedCoordinate"
+		},
+		"y": {
+			"$ref": "#/definitions/NormalizedCoordinate"
+		}
+	},
+	"definitions": {
+		"NormalizedCoordinate": {
+			"type": "number",
+			"minimum": -1,
+			"maximum": 1
+		}
+	}
+}
